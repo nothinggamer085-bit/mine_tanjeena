@@ -5,270 +5,543 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Tanjeena ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Playfair Display',serif}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
-  min-height:100vh;
+  background:
+  radial-gradient(circle at top,#251128,#0d0813 60%);
+  color:white;
+  font-family:'Poppins',sans-serif;
   overflow-x:hidden;
-  background:linear-gradient(-45deg,#ffb7c5,#f7c1e1,#e6b7ff,#c9b7ff);
-  background-size:400% 400%;
-  animation:bg 22s ease infinite;
-  color:white;
-}
-
-@keyframes bg{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-
-/* LOCK */
-.lock{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.65);
-  backdrop-filter:blur(14px);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:10;
-}
-
-.lock-box{
-  background:rgba(255,255,255,0.18);
-  padding:50px;
-  border-radius:22px;
-  text-align:center;
-  animation:fadeUp 1.6s ease;
-}
-
-input{
-  padding:12px 22px;
-  border-radius:30px;
-  border:none;
-  margin-top:20px;
-  outline:none;
-  text-align:center;
-}
-
-button{
-  margin-top:20px;
-  padding:12px 30px;
-  border:none;
-  border-radius:30px;
-  cursor:pointer;
-  background:white;
-  color:#b0004d;
-}
-
-/* MAIN */
-.main{
-  display:none;
-  padding:90px 20px 140px;
-  text-align:center;
-  animation:fadeUp 2s ease;
-}
-
-h1{font-size:3rem;margin-bottom:12px}
-p{opacity:0.9}
-
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-/* GALLERY */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-  margin:70px auto;
-  max-width:1000px;
-}
-
-.photo{
-  border-radius:18px;
-  overflow:hidden;
-  cursor:pointer;
-  transition:transform 0.4s ease;
-  box-shadow:0 12px 40px rgba(0,0,0,0.25);
-}
-.photo:hover{transform:scale(1.04)}
-.photo img{width:100%;display:block}
-
-/* FULLSCREEN PHOTO */
-.viewer{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.85);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:20;
-}
-
-.viewer img{
-  max-width:90%;
-  max-height:90%;
-  border-radius:18px;
-  box-shadow:0 0 60px rgba(255,182,193,0.5);
-}
-
-/* LETTER */
-.letter{
-  max-width:650px;
-  margin:40px auto 80px;
-  background:rgba(255,255,255,0.18);
-  backdrop-filter:blur(10px);
-  padding:40px;
-  border-radius:22px;
-}
-
-/* FINAL QUESTION */
-.final{
-  max-width:600px;
-  margin:0 auto;
-  padding:50px;
-  background:rgba(255,255,255,0.18);
-  backdrop-filter:blur(12px);
-  border-radius:24px;
-  animation:fadeUp 2s ease;
-}
-
-.buttons{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  margin-top:30px;
-}
-
-.yes{
-  background:white;
-  color:#b0004d;
-}
-.no{
-  background:transparent;
-  border:2px solid white;
-  color:white;
+  min-height:100vh;
   position:relative;
 }
 
-/* PETALS */
-.petal{
+/* 🌸 PETALS */
+
+.petals{
   position:fixed;
-  top:-20px;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
   pointer-events:none;
-  animation:fall linear infinite;
-  opacity:0.8;
-}
-@keyframes fall{
-  to{transform:translateY(110vh) rotate(360deg)}
+  z-index:0;
 }
 
-/* MOBILE */
-@media(max-width:600px){
-  h1{font-size:2.4rem}
+.petal{
+  position:absolute;
+  top:-20px;
+  border-radius:50%;
+  background:
+  radial-gradient(circle,#ffb6d9,#ff4d88);
+  opacity:0.7;
+  animation:fall linear infinite;
 }
+
+@keyframes fall{
+
+  0%{
+    transform:
+    translateY(0)
+    rotate(0deg);
+  }
+
+  100%{
+    transform:
+    translateY(120vh)
+    rotate(360deg);
+  }
+
+}
+
+/* 🌙 MAIN */
+
+.container{
+  position:relative;
+  z-index:2;
+  width:100%;
+  padding:40px 18px 100px;
+}
+
+/* 💖 TITLE */
+
+.title{
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  font-size:clamp(38px,6vw,70px);
+  color:#ff77aa;
+
+  text-shadow:
+  0 0 12px rgba(255,77,136,0.8),
+  0 0 25px rgba(255,77,136,0.5);
+
+  animation:glow 3s infinite ease-in-out;
+}
+
+.subtitle{
+  text-align:center;
+  color:#ffd9e8;
+  font-size:clamp(15px,2vw,22px);
+  margin-bottom:60px;
+}
+
+/* ✨ GLOW */
+
+@keyframes glow{
+
+  0%{
+    text-shadow:
+    0 0 10px rgba(255,77,136,0.6);
+  }
+
+  50%{
+    text-shadow:
+    0 0 22px rgba(255,77,136,1),
+    0 0 50px rgba(255,77,136,0.7);
+  }
+
+  100%{
+    text-shadow:
+    0 0 10px rgba(255,77,136,0.6);
+  }
+
+}
+
+/* 📸 GALLERY */
+
+.gallery-title{
+  text-align:center;
+  color:#ff9fc2;
+  margin-bottom:25px;
+  font-size:clamp(24px,4vw,38px);
+}
+
+.photo-gallery{
+  width:100%;
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+
+  gap:22px;
+
+  max-width:1300px;
+  margin:auto;
+}
+
+.photo-gallery img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+
+  border-radius:22px;
+
+  border:2px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+  0 10px 25px rgba(255,77,136,0.2);
+
+  transition:0.5s ease;
+}
+
+.photo-gallery img:hover{
+  transform:scale(1.04);
+
+  box-shadow:
+  0 15px 35px rgba(255,77,136,0.4);
+}
+
+/* 💌 BIG NOTE */
+
+.love-note{
+  position:relative;
+
+  max-width:950px;
+
+  margin:110px auto;
+
+  padding:60px 35px;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border-radius:35px;
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+  0 0 35px rgba(255,77,136,0.12);
+
+  overflow:hidden;
+
+  animation:fadeIn 3s ease forwards;
+}
+
+.love-glow{
+  position:absolute;
+
+  width:420px;
+  height:420px;
+
+  background:
+  radial-gradient(circle,
+  rgba(255,77,136,0.25),
+  transparent 70%);
+
+  top:-140px;
+  right:-140px;
+
+  animation:floatGlow 6s infinite ease-in-out;
+}
+
+.love-note h2{
+  text-align:center;
+
+  font-size:
+  clamp(32px,5vw,52px);
+
+  margin-bottom:35px;
+
+  color:#ff7fad;
+
+  text-shadow:
+  0 0 12px rgba(255,77,136,0.7),
+  0 0 28px rgba(255,77,136,0.35);
+}
+
+.love-note p{
+
+  font-size:
+  clamp(16px,2vw,22px);
+
+  line-height:2.2;
+
+  color:#ffe3ef;
+
+  text-align:center;
+}
+
+/* 💍 FOREVER SECTION */
+
+.forever-wrapper{
+  position:relative;
+
+  margin-top:90px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+
+  padding:100px 20px;
+}
+
+.ring{
+  position:absolute;
+
+  width:320px;
+  height:320px;
+
+  border-radius:50%;
+
+  border:2px solid
+  rgba(255,77,136,0.4);
+
+  animation:ringPulse 4s infinite ease-in-out;
+}
+
+.quote{
+  max-width:850px;
+
+  text-align:center;
+
+  font-size:
+  clamp(28px,5vw,58px);
+
+  line-height:1.5;
+
+  color:#ffd9e8;
+
+  opacity:0;
+
+  transform:translateY(40px);
+
+  animation:
+  fadeUp 3s ease forwards;
+
+  animation-delay:1s;
+
+  text-shadow:
+  0 0 12px rgba(255,77,136,0.7),
+  0 0 25px rgba(255,77,136,0.4);
+}
+
+.signature{
+  margin-top:25px;
+
+  color:#ff9fc2;
+
+  font-size:
+  clamp(16px,2vw,24px);
+}
+
+/* ✨ ANIMATIONS */
+
+@keyframes ringPulse{
+
+  0%{
+    transform:scale(0.9);
+    opacity:0.5;
+  }
+
+  50%{
+    transform:scale(1.12);
+    opacity:0.2;
+  }
+
+  100%{
+    transform:scale(0.9);
+    opacity:0.5;
+  }
+
+}
+
+@keyframes fadeUp{
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(50px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+@keyframes floatGlow{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(20px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+/* 📱 MOBILE */
+
+@media(max-width:768px){
+
+  .container{
+    padding:30px 14px 80px;
+  }
+
+  .photo-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .photo-gallery img{
+    height:280px;
+  }
+
+  .love-note{
+    padding:45px 22px;
+    border-radius:28px;
+  }
+
+  .love-note p{
+    line-height:2;
+  }
+
+  .ring{
+    width:250px;
+    height:250px;
+  }
+
+  .forever-wrapper{
+    padding:80px 10px;
+  }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- LOCK -->
-<div class="lock" id="lock">
-  <div class="lock-box">
-    <h2>🔒 Only for you</h2>
-    <p>Enter the code</p>
-    <input type="password" id="code" placeholder="Secret code">
-    <br>
-    <button onclick="unlock()">Unlock ❤️</button>
+<!-- 🌸 PETALS -->
+<div class="petals"></div>
+
+<div class="container">
+
+  <!-- 💖 TITLE -->
+  <h1 class="title">
+    For Tanjeena ❤️
+  </h1>
+
+  <p class="subtitle">
+    You are my calm, my choice, my forever.
+  </p>
+
+  <!-- 📸 GALLERY -->
+  <h2 class="gallery-title">
+    ✨ Our Memories ✨
+  </h2>
+
+  <div class="photo-gallery">
+
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+
+    <!-- ADD MORE PHOTOS LIKE THIS -->
+    <!--
+    <img src="photo4.jpg">
+    <img src="photo5.jpg">
+    -->
+
   </div>
-</div>
 
-<!-- VIEWER -->
-<div class="viewer" id="viewer" onclick="closeView()">
-  <img id="viewImg">
-</div>
+  <!-- 💌 BIG NOTE -->
+  <div class="love-note">
 
-<!-- MAIN -->
-<div class="main" id="main">
-  <h1>Tanjeena ❤️</h1>
-  <p>You are my calm, my choice, my forever.</p>
+    <div class="love-glow"></div>
 
-  <div class="gallery">
-    <div class="photo"><img src="photo1.jpg" onclick="openView(this.src)"></div>
-    <div class="photo"><img src="photo2.jpg" onclick="openView(this.src)"></div>
-    <div class="photo"><img src="photo3.jpg" onclick="openView(this.src)"></div>
-  </div>
+    <h2>To My Tanjeena 💖</h2>
 
-  <div class="letter">
-    <h2>My Love Letter 💌</h2>
     <p>
-      (Write your message here.)<br><br>
-      Loving you feels gentle and strong at the same time.
-      You make my world feel right.
+
+      Meri pyari Tanjeena, 💖✨<br><br>
+
+      Har ek din mai tumse aur zyada mohabbat karne lagta hoon.
+      Tum meri poori duniya ho, meri sabse pasandida insan
+      aur meri zindagi ki sabse haseen roshni. 🌸💫<br><br>
+
+      Mujhe tumhari hansi, tumhara masoom dil
+      aur tumhara mere sath hona
+      sabse zyada khushi deta hai. 🥺❤️<br><br>
+
+      Mai aaj tumse dil ki baat kehna chahta hoon
+      ke mere liye tumhara hath pakadna
+      aur tumhare qareeb aana itna zaroori kyun hai. 👩‍❤️‍👨✨<br><br>
+
+      Jab mai tumhara hath thamta hoon
+      ya tumhe baahon mein leta hoon,
+      toh woh mera tariqa hai tumhe yeh batane ka
+      ke tum mere sath bilkul safe ho
+      aur mai hamesha tumhare sath hoon. 🤝❤️<br><br>
+
+      Jab bhi mai pareshan hota hoon
+      ya thak jata hoon,
+      toh tumhe gale lagate hi meri saari fikr gayab ho jati hai
+      aur mujhe bohot sukoon milta hai. 🫂😭<br><br>
+
+      Words bohot khubsoorat hote hain,
+      par jo sukoon tumhare mathe par kiss karne se
+      ya tumhara chehra sehlane se milta hai,
+      woh baatein bayan nahi kar sakteen;
+      yeh cheez humare dilon ko
+      aur zyada majboot jor deti hai. ⚡💖<br><br>
+
+      Yeh mera tariqa hai tumhe batane ka
+      ke tum mere liye kitni precious ho. 🥰<br><br>
+
+      Mai kabhi nahi chahta ke tum par koi pressure ho,
+      mai bas yeh batana chahta hoon
+      ke tumhara har ek touch,
+      chahe woh bas chalte hue hath pakadna ho
+      ya ek choti si hug,
+      mere liye poori duniya hai
+      kyunki woh tum ho. 🌹🧸<br><br>
+
+      Mera poora dil sirf aur sirf tumhara hai Tanjeena,
+      hamesha aur har lamha. 👑❤️<br><br>
+
+      I love you so much! 💋🕊️
+
     </p>
+
   </div>
 
-  <!-- FINAL QUESTION -->
-  <div class="final">
-    <h2>Will you be mine? 💖</h2>
-    <div class="buttons">
-      <button class="yes" onclick="yes()">Yes 💕</button>
-      <button class="no" id="no">No 🙈</button>
+  <!-- 💍 FOREVER QUOTE -->
+  <div class="forever-wrapper">
+
+    <div class="ring"></div>
+
+    <div class="quote">
+      “If forever had a face,
+      it would look like you.”
     </div>
+
+    <div class="signature">
+      — Always yours 💖
+    </div>
+
   </div>
+
 </div>
 
 <script>
-/* UNLOCK */
-function unlock(){
-  if(document.getElementById("code").value==="QALBI"){
-    lock.style.display="none";
-    main.style.display="block";
-    if(navigator.vibrate){navigator.vibrate([200,100,200]);}
-  } else alert("Wrong code 💔");
+
+/* 🌸 PETALS */
+
+const petalsContainer =
+document.querySelector('.petals');
+
+for(let i=0;i<45;i++){
+
+  const petal =
+  document.createElement('div');
+
+  petal.classList.add('petal');
+
+  petal.style.left =
+  Math.random()*100 + "vw";
+
+  petal.style.width =
+  (8 + Math.random()*10) + "px";
+
+  petal.style.height =
+  petal.style.width;
+
+  petal.style.animationDuration =
+  (5 + Math.random()*7) + "s";
+
+  petal.style.opacity =
+  Math.random();
+
+  petalsContainer.appendChild(petal);
+
 }
 
-/* PHOTO VIEW */
-function openView(src){
-  viewImg.src=src;
-  viewer.style.display="flex";
-}
-function closeView(){viewer.style.display="none"}
-
-/* FINAL YES */
-function yes(){
-  document.body.innerHTML=`
-    <div style="height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:white;">
-      <div>
-        <h1>She said YES ❤️</h1>
-        <p>This is the beginning of us.</p>
-      </div>
-    </div>`;
-}
-
-/* NO BUTTON ESCAPE */
-const no=document.getElementById("no");
-no.addEventListener("mouseover",()=>{
-  no.style.left=Math.random()*120-60+"px";
-  no.style.top=Math.random()*120-60+"px";
-});
-
-/* PETALS */
-const petals=["🌸","🌷","🌺","💮","🌹"];
-for(let i=0;i<22;i++){
-  let p=document.createElement("div");
-  p.className="petal";
-  p.innerHTML=petals[Math.floor(Math.random()*petals.length)];
-  p.style.left=Math.random()*100+"vw";
-  p.style.fontSize=14+Math.random()*20+"px";
-  p.style.animationDuration=14+Math.random()*10+"s";
-  document.body.appendChild(p);
-}
 </script>
 
 </body>
