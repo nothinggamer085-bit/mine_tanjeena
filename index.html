@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Tanju baby 💖</title>
+<title>For Tanjeena 💖</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -55,7 +55,6 @@ body{
 }
 
 @keyframes fall{
-
   0%{
     transform:
     translateY(0)
@@ -67,7 +66,6 @@ body{
     translateY(120vh)
     rotate(360deg);
   }
-
 }
 
 /* 💖 FIRST SCREEN */
@@ -94,7 +92,7 @@ body{
   #170a13 50%,
   #080509 100%);
 
-  transition:1.2s ease;
+  transition:1s ease;
 }
 
 .start-heart{
@@ -241,18 +239,15 @@ body{
 }
 
 #continueBtn.show{
-
   opacity:1;
-
   pointer-events:auto;
 }
 
 #continueBtn:hover{
-
   transform:scale(1.05);
 }
 
-/* 🌙 MAIN CONTENT */
+/* 🌙 WEBSITE */
 
 .main-content{
 
@@ -309,9 +304,7 @@ body{
 /* 💌 TYPING */
 
 .typing-container{
-
   text-align:center;
-
   margin-bottom:60px;
 }
 
@@ -381,7 +374,7 @@ body{
   0 15px 40px rgba(255,105,180,0.35);
 }
 
-/* 💌 LOVE NOTE */
+/* 💌 NOTE */
 
 .love-note{
 
@@ -440,9 +433,6 @@ body{
   color:#ff9fc7;
 
   margin-bottom:35px;
-
-  text-shadow:
-  0 0 15px rgba(255,120,170,0.45);
 }
 
 #loveText{
@@ -456,7 +446,7 @@ body{
   font-size:
   clamp(16px,2vw,22px);
 
-  min-height:400px;
+  min-height:500px;
 }
 
 /* 💍 FOREVER */
@@ -580,6 +570,86 @@ body{
   clamp(18px,2vw,28px);
 }
 
+/* 💍 FINAL PROPOSAL */
+
+.proposal-section{
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+
+  padding:140px 20px 120px;
+
+  position:relative;
+}
+
+.proposal-ring{
+
+  width:140px;
+  height:140px;
+
+  border-radius:50%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:70px;
+
+  cursor:pointer;
+
+  background:
+  radial-gradient(circle,
+  rgba(255,255,255,0.08),
+  rgba(255,255,255,0.02));
+
+  border:
+  2px solid rgba(255,190,220,0.45);
+
+  box-shadow:
+  0 0 20px rgba(255,190,220,0.25),
+  0 0 50px rgba(255,120,170,0.18);
+
+  animation:
+  proposalGlow 3s infinite ease-in-out,
+  floatingRing 4s infinite ease-in-out;
+
+  transition:0.4s ease;
+}
+
+.proposal-ring:hover{
+  transform:scale(1.08);
+}
+
+#replyText{
+
+  margin-top:40px;
+
+  text-align:center;
+
+  font-size:
+  clamp(28px,4vw,48px);
+
+  color:#ffe4ef;
+
+  opacity:0;
+
+  transform:
+  translateY(20px);
+
+  transition:1s ease;
+
+  text-shadow:
+  0 0 12px rgba(255,120,170,0.6),
+  0 0 35px rgba(255,120,170,0.3);
+}
+
+#replyText.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
 /* 🫶 IMAGE VIEWER */
 
 .image-viewer{
@@ -611,9 +681,6 @@ body{
   max-height:90%;
 
   border-radius:25px;
-
-  box-shadow:
-  0 0 45px rgba(255,120,170,0.35);
 }
 
 .close-viewer{
@@ -715,35 +782,62 @@ body{
 @keyframes romanticGlow{
 
   0%{
-
     box-shadow:
     0 0 25px rgba(0,255,180,0.18),
     0 0 55px rgba(0,170,255,0.18),
     0 0 90px rgba(255,120,170,0.12);
-
   }
 
   50%{
-
     box-shadow:
     0 0 40px rgba(0,255,180,0.3),
     0 0 80px rgba(0,170,255,0.28),
     0 0 120px rgba(255,120,170,0.18);
-
   }
 
   100%{
-
     box-shadow:
     0 0 25px rgba(0,255,180,0.18),
     0 0 55px rgba(0,170,255,0.18),
     0 0 90px rgba(255,120,170,0.12);
-
   }
-
 }
 
-/* 📱 MOBILE */
+@keyframes proposalGlow{
+
+  0%{
+    box-shadow:
+    0 0 20px rgba(255,190,220,0.25),
+    0 0 50px rgba(255,120,170,0.18);
+  }
+
+  50%{
+    box-shadow:
+    0 0 35px rgba(255,190,220,0.45),
+    0 0 80px rgba(255,120,170,0.3);
+  }
+
+  100%{
+    box-shadow:
+    0 0 20px rgba(255,190,220,0.25),
+    0 0 50px rgba(255,120,170,0.18);
+  }
+}
+
+@keyframes floatingRing{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
 
 @media(max-width:768px){
 
@@ -771,7 +865,6 @@ body{
 
 <body>
 
-<!-- 🌸 PETALS -->
 <div class="petals"></div>
 
 <!-- 💖 FIRST SCREEN -->
@@ -823,13 +916,9 @@ body{
     You are my calm, my comfort, my forever.
   </p>
 
-  <!-- 💌 TYPING -->
-
   <div class="typing-container">
     <h2 id="typing-text"></h2>
   </div>
-
-  <!-- 📸 GALLERY -->
 
   <h2 class="gallery-title">
     ✨ Our Beautiful Memories ✨
@@ -844,12 +933,10 @@ body{
     <img src="photo5.jpg">
     <img src="photo6.jpg">
     <img src="photo7.jpg">
-    <img src="photo8.jpg">
-    <img src="photo9.jpg">
 
   </div>
 
-  <!-- 💌 LOVE NOTE -->
+  <!-- 💌 NOTE -->
 
   <div class="love-note">
 
@@ -895,6 +982,22 @@ body{
 
   </div>
 
+  <!-- 💍 FINAL RING -->
+
+  <div class="proposal-section">
+
+    <div class="proposal-ring"
+    onclick="showReplyText()">
+      💍
+    </div>
+
+    <h2 id="replyText">
+      Okkk 😌💖<br>
+      I Am Waiting For Your Reply ✨
+    </h2>
+
+  </div>
+
 </div>
 
 <!-- 🫶 IMAGE VIEWER -->
@@ -934,14 +1037,11 @@ for(let i=0;i<45;i++){
   petal.style.animationDuration =
   (5 + Math.random()*7) + "s";
 
-  petal.style.opacity =
-  Math.random();
-
   petals.appendChild(petal);
 
 }
 
-/* 💖 FIRST SCREEN */
+/* 💖 OPEN FIRST SCREEN */
 
 function openLove(){
 
@@ -955,8 +1055,6 @@ function openLove(){
   document.getElementById("startScreen");
 
   start.style.opacity = "0";
-
-  start.style.filter = "blur(20px)";
 
   setTimeout(()=>{
 
@@ -985,7 +1083,7 @@ function openLove(){
 
 }
 
-/* 💖 FINAL WEBSITE */
+/* 💖 OPEN WEBSITE */
 
 function showWebsite(){
 
@@ -1001,8 +1099,6 @@ function showWebsite(){
   document.getElementById("vibesScreen");
 
   vibes.style.opacity = "0";
-
-  vibes.style.filter = "blur(20px)";
 
   setTimeout(()=>{
 
@@ -1073,29 +1169,19 @@ function typeText(){
 
 const romanticNote = `
 
-Meri pyari Tanjeena, 💖✨<br><br>
+Meri sabse pyari, sabse haseen aur meri poori zindagi Tanjeena, 💖✨<br><br>
 
-Har ek din mai tumse aur zyada mohabbat karne lagta hoon.
-Tum meri poori duniya ho,
-meri sabse pasandida insan
-aur meri zindagi ki sabse haseen roshni. 🌸💫<br><br>
+Mai jitna bhi likhoon, jitna bhi kahoon, kam hai kyunki tumse mohabbat hi itni be-panah ho gayi hai ke lafz khatam ho jate hain par tumhare liye mera pyaar kabhi kam nahi hota. 🌸💫<br><br>
 
-Mujhe tumhari hansi,
-tumhara masoom dil
-aur tumhara mere sath hona
-sabse zyada khushi deta hai. 🥺❤️<br><br>
+Tum sirf meri girlfriend nahi ho, tum meri rooh ka hissa ho, meri hansi ki wajah ho, aur woh pehli aur aakhri insan ho jise mai har khushi aur har gham mein apne sabse qareeb dekhna chahta hoon. 🥺❤️<br><br>
 
-Tumhara har touch,
-har smile,
-har choti si baat
-mere liye bohot precious hai. 🌹💖<br><br>
+Jab se tum meri zindagi mein aayi ho, har ek lamha jannat jaisa lagne laga hai aur mai har din khuda ka shukr ada karta hoon ke unhone mujhe tum jaisa anmol tohfa diya. 👩‍❤️‍👨✨<br><br>
 
-Mera poora dil sirf aur sirf tumhara hai,
-aaj bhi,
-kal bhi,
-hamesha bhi. 👑❤️<br><br>
+Mera dil chahta hai ke mai tum par apni saari mohabbat nisaar kar doon aur tumhe hamesha yeh ehsaas dilaoon ke tum mere liye kitni special ho. 👑❤️<br><br>
 
-I love you so much Tanjeena 💋🕊️
+Tumhara ek chota sa touch bhi mere dil mein hazaron phool khila deta hai aur mujhe bohot sukoon de jata hai. 🌹💖<br><br>
+
+I love you more than anyone can ever love someone, meri Tanjeena, hamesha aur hamesha ke liye! 💘🔥💍
 
 `;
 
@@ -1115,7 +1201,7 @@ function typeLoveNote(){
 
       noteIndex++;
 
-      setTimeout(write,20);
+      setTimeout(write,18);
 
     }
 
@@ -1157,7 +1243,23 @@ function startHeartRain(){
 
 }
 
-/* 🫶 FULLSCREEN IMAGES */
+/* 💍 FINAL REPLY */
+
+function showReplyText(){
+
+  if(navigator.vibrate){
+
+    navigator.vibrate([150,80,150]);
+
+  }
+
+  document
+  .getElementById("replyText")
+  .classList.add("show");
+
+}
+
+/* 🫶 IMAGE VIEWER */
 
 const images =
 document.querySelectorAll(".photo-gallery img");
