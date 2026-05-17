@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Sharike Hayat 💖</title>
+<title>For Tanju baby 💖</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -70,7 +70,7 @@ body{
 
 }
 
-/* 💖 START SCREEN */
+/* 💖 FIRST SCREEN */
 
 .start-screen{
 
@@ -150,6 +150,105 @@ body{
 }
 
 .start-screen button:hover{
+  transform:scale(1.05);
+}
+
+/* 💖 SECOND SCREEN */
+
+.vibes-screen{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  z-index:999998;
+
+  display:none;
+
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+
+  background:
+  radial-gradient(circle at top,
+  #2d1227 0%,
+  #160a14 50%,
+  #080509 100%);
+
+  opacity:0;
+
+  transition:1s ease;
+}
+
+.vibes-heart{
+
+  font-size:85px;
+
+  margin-bottom:25px;
+
+  animation:heartbeat 2s infinite;
+}
+
+.vibes-screen h1{
+
+  text-align:center;
+
+  line-height:1.6;
+
+  color:#ffe3ef;
+
+  font-size:
+  clamp(28px,5vw,58px);
+
+  text-shadow:
+  0 0 12px rgba(255,120,170,0.7),
+  0 0 35px rgba(255,120,170,0.35);
+}
+
+#continueBtn{
+
+  margin-top:45px;
+
+  padding:18px 45px;
+
+  border:none;
+
+  border-radius:50px;
+
+  font-size:20px;
+
+  cursor:pointer;
+
+  color:white;
+
+  background:
+  linear-gradient(135deg,
+  #ff77aa,
+  #ffb6d5);
+
+  box-shadow:
+  0 0 20px rgba(255,120,170,0.4);
+
+  transition:0.4s ease;
+
+  opacity:0;
+
+  pointer-events:none;
+}
+
+#continueBtn.show{
+
+  opacity:1;
+
+  pointer-events:auto;
+}
+
+#continueBtn:hover{
+
   transform:scale(1.05);
 }
 
@@ -675,7 +774,7 @@ body{
 <!-- 🌸 PETALS -->
 <div class="petals"></div>
 
-<!-- 💖 START SCREEN -->
+<!-- 💖 FIRST SCREEN -->
 
 <div class="start-screen" id="startScreen">
 
@@ -689,6 +788,25 @@ body{
 
   <button onclick="openLove()">
     Enter 💌
+  </button>
+
+</div>
+
+<!-- 💖 SECOND SCREEN -->
+
+<div class="vibes-screen" id="vibesScreen">
+
+  <div class="vibes-heart">💞</div>
+
+  <h1>
+    Okayyy 😌✨<br><br>
+    So You Are Interested In<br>
+    Feeling The Best Vibes 💖
+  </h1>
+
+  <button id="continueBtn"
+  onclick="showWebsite()">
+    Continue 💌
   </button>
 
 </div>
@@ -726,6 +844,8 @@ body{
     <img src="photo5.jpg">
     <img src="photo6.jpg">
     <img src="photo7.jpg">
+    <img src="photo8.jpg">
+    <img src="photo9.jpg">
 
   </div>
 
@@ -750,13 +870,10 @@ body{
     <div class="quote">
       “If forever had a face,
       it would look like you.”
-      "Meri sb se zyda achi feeling
-      or pure din ki soch ho aap meri jaan
-      The most best feeling."
     </div>
 
     <div class="signature">
-      — Always yours tane marne wala 😆💖
+      — Always yours 💖
     </div>
 
   </div>
@@ -824,7 +941,7 @@ for(let i=0;i<45;i++){
 
 }
 
-/* 💖 OPEN WEBSITE */
+/* 💖 FIRST SCREEN */
 
 function openLove(){
 
@@ -844,6 +961,52 @@ function openLove(){
   setTimeout(()=>{
 
     start.style.display = "none";
+
+    const vibes =
+    document.getElementById("vibesScreen");
+
+    vibes.style.display = "flex";
+
+    setTimeout(()=>{
+
+      vibes.style.opacity = "1";
+
+    },100);
+
+    setTimeout(()=>{
+
+      document
+      .getElementById("continueBtn")
+      .classList.add("show");
+
+    },5000);
+
+  },1000);
+
+}
+
+/* 💖 FINAL WEBSITE */
+
+function showWebsite(){
+
+  if(navigator.vibrate){
+
+    navigator.vibrate([300,100,300]);
+
+  }
+
+  alert("Muuh 😘 Love Youuu 💖");
+
+  const vibes =
+  document.getElementById("vibesScreen");
+
+  vibes.style.opacity = "0";
+
+  vibes.style.filter = "blur(20px)";
+
+  setTimeout(()=>{
+
+    vibes.style.display = "none";
 
     const main =
     document.getElementById("mainContent");
@@ -906,7 +1069,7 @@ function typeText(){
 
 }
 
-/* 💌 LOVE NOTE WRITING */
+/* 💌 NOTE WRITING */
 
 const romanticNote = `
 
